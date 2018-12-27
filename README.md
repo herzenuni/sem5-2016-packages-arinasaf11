@@ -46,4 +46,35 @@ if __name__ == '__main__':
 
 Любая директория, содержащая файл  __init__.py, автоматически становится пакетом.
 Для создания пакета необходимо создать этот файл.
+Когда мы выполняем команду import <название_пакета> "выполняется" файл __init__.py.
+Поэтому нам надо импортировать в __init__.py наш модуль.
 
+```python
+#Модуль sys обеспечивает доступ к некоторым переменным и функциям, взаимодействующим с интерпретатором python.
+#sys.path.append - добавляет относительные пути для поиска модулей.
+import sys
+sys.path.append(get_script_dir())
+from guestBook import GuestBook
+#из файла guestBook импортируем модуль GuestBook
+```
+В результате мы сможем записывать и удалять имена в json-файле, импортируя папку package, в котором хранится наш пакет.
+
+```python
+import package
+gb = package.GuestBook()
+gb.add_guest("Egor")
+gb.add_guest("Arina")
+gb.add_guest("Nikita")
+gb.delete_guest("Egor")
+gb.record_file()
+```
+
+в папке, где находится запускаемый файл, создается GuestBook.json:
+
+```json
+{"List_of_guests": [
+{"Guest_name": "Arina"}, 
+{"Guest_name": "Nikita"}
+]
+}
+```
