@@ -72,8 +72,15 @@ gb.record_file()
 в папке, где находится запускаемый файл, создается GuestBook.json:
 
 ```json
-{"List_of_guests": [
-{"Guest_name": "Arina"}, 
-{"Guest_name": "Nikita"}
-]}
+{
+   "List_of_guests": 
+  [
+    {
+   "Guest_name": "Arina"
+    }, 
+    {
+   "Guest_name": "Nikita"
+    }
+  ]
+}
 ```
