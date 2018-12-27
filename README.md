@@ -75,6 +75,5 @@ gb.record_file()
 {"List_of_guests": [
 {"Guest_name": "Arina"}, 
 {"Guest_name": "Nikita"}
-]
-}
+]}
 ```
